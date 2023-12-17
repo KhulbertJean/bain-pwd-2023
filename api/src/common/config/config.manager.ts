@@ -7,10 +7,12 @@ class ConfigManager {
 
     constructor(private env: { [k: string]: string | undefined }) {}
 
+    // Méthode pour s'assurer que les valeurs des clés spécifiées sont présentes dans l'objet env
     public ensureValues(keys: ConfigKey[]): ConfigManager {
         keys.forEach((k: ConfigKey) => this.getValue(k, true));
         return this;
     }
+    // Méthode pour obtenir la configuration TypeORM
     public getTypeOrmConfig(): TypeOrmModuleOptions {
         return {
 
@@ -24,6 +26,7 @@ class ConfigManager {
             synchronize: (this.getValue(ConfigKey.DB_SYNC)=== 'true'),
         }
     }
+    // Méthode pour obtenir la valeur associée à une clé de configuration
     getValue(key: ConfigKey, throwOnMissing = true): string {
         const value = this.env[key];
         if (!value && throwOnMissing) {

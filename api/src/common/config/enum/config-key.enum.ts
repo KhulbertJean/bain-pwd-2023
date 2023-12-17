@@ -1,3 +1,4 @@
+// Énumération des clés de configuration avec leurs valeurs associées
 export enum ConfigKey {
     DB_HOST = 'DB_HOST',
     DB_PORT = 'DB_PORT',
@@ -13,5 +14,14 @@ export enum ConfigKey {
     APP_BASE_URL = 'APP_BASE_URL',
     APP_MODE = 'APP_MODE',
     APP_PORT = 'APP_PORT'
+
 }
+//Ajoute un enum pour le genre
+export enum GENDER {
+    MALE = 'male',
+    FEMALE = 'female',
+    OTHER = 'other',
+}
+type Gender = keyof typeof GENDER;
+
 export const configMinimalKeys: ConfigKey[] = Object.keys(ConfigKey) as ConfigKey[];
