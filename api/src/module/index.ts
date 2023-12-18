@@ -1,2 +1,2 @@
 export * from './member.module';
-export * from './membre';
+export * from './member';

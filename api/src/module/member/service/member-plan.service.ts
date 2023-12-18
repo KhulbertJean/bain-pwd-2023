@@ -1,9 +1,9 @@
 import {Injectable} from '@nestjs/common';
 import {Builder} from 'builder-pattern';
 import {InjectRepository} from '@nestjs/typeorm';
-import {MemberPlanCreatePayload} from '../model/payload/member-plan-create.payload';
-import {MemberPlanUpdatePayload} from '../model/payload/member-plan-update';
-import {MemberPlan} from '../model/entity/member-plan.entity';
+import {MemberPlanCreatePayload} from '../model';
+import {MemberPlanUpdatePayload} from '../model';
+import {MemberPlan} from '../model';
 import {Repository} from 'typeorm/browser';
 import {isNil} from '@nestjs/common/utils/shared.utils';
 

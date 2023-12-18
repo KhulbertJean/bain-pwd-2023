@@ -1,4 +1,4 @@
-import {Column, Entity, JoinColumn, JoinTable, ManyToMany, OneToMany, OneToOne, PrimaryColumn} from 'typeorm';
+import {Column, Entity, JoinColumn, OneToOne, PrimaryColumn} from 'typeorm';
 import {ulid} from 'ulid';
 import {Car} from './car.entity';
 

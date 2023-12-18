@@ -1,11 +1,11 @@
 import {InjectRepository} from '@nestjs/typeorm';
 import {Builder} from 'builder-pattern';
-import {Member} from '../model/entity/member.entity';
+import {Member} from '../model';
 import {Repository} from 'typeorm/browser';
 import {isNil} from '@nestjs/common/utils/shared.utils';
 
-import {MemberCreatePayload} from '../model/payload/member-create.payload';
-import {MemberUpdatePayload} from '../model/payload/member-update.payload';
+import {MemberCreatePayload} from '../model';
+import {MemberUpdatePayload} from '../model';
 
 export class MemberService {constructor(@InjectRepository(Member) private readonly repository:
                                             Repository<Member>) {}
