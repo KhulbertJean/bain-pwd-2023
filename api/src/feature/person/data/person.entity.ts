@@ -2,8 +2,8 @@ import {Column, Entity, JoinColumn, OneToOne, PrimaryColumn} from 'typeorm';
 import {ulid} from 'ulid';
 import {Car} from './car.entity';
 
-@Entity
-    export class Person {
+@Entity()
+export class Person {
     @PrimaryColumn('varchar', { length:26, default: () => `'${ulid()}'` })
     private person_id:string;
 
